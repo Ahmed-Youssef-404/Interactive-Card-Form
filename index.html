@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="rightImage">
+            <img src="images/bg-main-desktop.png" alt="image-header-desktop">
+        </div>
+
+        <div class="inputForm">
+            <form id="theForm">
+                <div class="name inputHolder">
+                    <label for="name">CARDHOLDER NAME</label>
+                    <input class="inputField" type="text" id="name" name="name" placeholder="e.g. Jane Appleseed">
+                    <div class="errorMessage" id="nameError">
+                        <p>* Name must be at least 10 characters.</p>
+                    </div>
+                </div>
+
+                <div class="number inputHolder">
+                    <label for="number">CARD NUMBER</label>
+                    <input class="inputField" type="number" id="number" name="number"
+                        placeholder="e.g. 1234 5678 9123 0000">
+                    <div class="errorMessage" id="numberError">
+                        <p>* Card number must be 12 digit.</p>
+                    </div>
+                </div>
+
+                <div class="dateAndcvc ">
+
+                    <div class="date inputHolder dateCVCfield">
+                        <label for="month">EXP. DATE (MM/YY)</label>
+                        <div class="errorMessage" id="dateError">
+                            <p>* Invalid date.</p>
+                        </div>
+                        <div class="selects">
+                            <select class="inputField selectOptionsHolder" id="month">
+                                <option value="" disabled selected>MM</option>
+                                <!-- Months 1 to 12 -->
+                                <option value="01">01</option>
+                                <option value="02">02</option>
+                                <option value="03">03</option>
+                                <option value="04">04</option>
+                                <option value="05">05</option>
+                                <option value="06">06</option>
+                                <option value="07">07</option>
+                                <option value="08">08</option>
+                                <option value="09">09</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+
+                            <select class="inputField selectOptionsHolder" id="year">
+                                <option value="" disabled selected>YY</option>
+                                <!-- Years 2024 to 2034 -->
+                                <option value="24">2024</option>
+                                <option value="25">2025</option>
+                                <option value="26">2026</option>
+                                <option value="27">2027</option>
+                                <option value="28">2028</option>
+                                <option value="29">2029</option>
+                                <option value="30">2030</option>
+                                <option value="31">2031</option>
+                                <option value="32">2032</option>
+                                <option value="33">2033</option>
+                                <option value="34">2034</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="cvc inputHolder dateCVCfield">
+                        <label for="cvc">CVC</label>
+                        <input class="inputField" type="number" id="cvc" name="cvc" placeholder="e.g. 123">
+                        <div class="errorMessage" id="cvcError">
+                            <p>* CVC number must be 3 digit.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="submitButton inputHolder">
+                    <button class="inputField" type="submit">Confirm</button>
+                </div>
+
+            </form>
+
+            <div class="thankYouHolder" id="thankYou">
+                <img src="images/icon-complete.svg" alt="">
+                <P>THANK YOU!</P>
+                <P>We'v added your card details</P>
+                <button class="submitButton">Continue</button>
+            </div>
+
+        </div>
+
+        <div class="cards">
+            <div class="card cardFront">
+                <img src="images/bg-card-front.png" alt="">
+
+                <div class="cardDetails">
+                    <div class="carLogo">
+                        <img src="images/card-logo.svg" alt="">
+                    </div>
+
+                    <div class="cardNumber">
+                        <p id="cardFinalNumber">0000 0000 0000 0000</p>
+                    </div>
+                    <div class="cardInfo">
+                        <p id="cardFinalName">The Name</p>
+                        <div>
+                            <span id="cardFinalMonth">00</span>/<span id="cardFinalYear">00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card cardBack">
+                <img src="images/bg-card-back.png" alt="">
+                <div class="cardCVC">
+                    <p id="cardFinalcvc">000</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script/script.js"></script>
+</body>
+
+</html>
+
+<!-- 
+  0000 0000 0000 0000
+  Jane Appleseed
+  00/00
+
+  000
+
+  Cardholder Name
+  e.g. Jane Appleseed
+
+  Card Number
+  e.g. 1234 5678 9123 0000
+
+  Exp. Date (MM/YY)
+  MM
+  YY
+
+  CVC
+  e.g. 123
+
+  Confirm
+
+  <complete statue>
+ 
+  Thank you!
+  We've added your card details
+  Continue
+  
+ -->

@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* border: none; */
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: flex;
+    /* justify-content: space-between; */
+    /* border: solid 5px rgb(246, 254, 0); */
+
+
+    .rightImage {
+        height: 100vh;
+        width: auto;
+        flex: 1;
+
+        /* border: solid green 10px; */
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .inputForm {
+        /* border: solid 10px red; */
+        flex: 2;
+        /* width: 60%; */
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        padding-right: 115px;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .dateAndcvc {
+                display: flex;
+                flex-direction: row !important;
+                gap: 20px !important;
+                /* border: solid 5px royalblue; */
+
+
+                .dateCVCfield {
+                    /* border: solid 5px royalblue; */
+                    display: flex;
+                    flex-direction: column !important;
+                    gap: 5px;
+
+                    .selects {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        gap: 32px;
+                    }
+                }
+            }
+
+            .inputHolder {
+                display: flex;
+                flex-direction: column;
+                gap: 6px !important;
+                /* border: solid 6px goldenrod; */
+            }
+
+            .inputField {
+                border: solid gainsboro 1px;
+                border-radius: 5px;
+                height: 35px;
+                padding-left: 10px;
+
+                &::placeholder {
+                    color: rgb(180, 180, 180);
+                }
+
+                &:focus {
+                    outline: none;
+                    background-color: rgb(249, 240, 255);
+                }
+
+                &[type="number"]::-webkit-outer-spin-button,
+                &[type="number"]::-webkit-inner-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+
+            }
+
+            label {
+                font-size: small;
+            }
+
+            .submitButton {
+                button {
+                    background-color: #220930 !important;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+
+            .errorMessage{
+                color: red;
+                font-size: small;
+                /* display: none; */
+            }
+
+            #nameError, #numberError, #dateError, #cvcError{
+                display: none;
+            }
+
+
+        }
+    }
+
+    .thankYouHolder{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+
+        button {
+            width: 300px;
+            height: 40px;
+            border-radius: 10px;
+            background-color: #220930 !important;
+            color: white;
+            cursor: pointer;
+        }
+    }
+
+    .cards {
+        /* border: solid yellow 5px; */
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 500px;
+        height: auto;
+        position: absolute;
+        top: 60px;
+        left: 180px;
+
+        .card {
+            /* border: solid rgb(255, 47, 47) 6px; */
+
+            img {
+                width: 75%;
+                height: auto;
+            }
+        }
+
+        .cardFront {
+            display: flex;
+            justify-content: start;
+            flex-direction: column;
+
+            .cardDetails {
+                /* border: solid greenyellow 6px; */
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                color: white;
+                width: 330px;
+                height: 159px;
+                position: absolute;
+                bottom: 255px;
+                left: 23px;
+            
+
+                .carLogo{
+                    width: 100px;
+                }
+                
+                .cardNumber {
+                    font-size: 2rem;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-top: 20px;
+                }
+                
+                .cardInfo{
+                    display: flex;
+                    justify-content: space-between;
+                    /* position: relative; */
+                    bottom: 100px;
+                    left: 29px;
+
+                }
+            }
+        }
+
+        .cardBack {
+            display: flex;
+            justify-content: end;
+            
+            .cardCVC{
+                position: absolute;
+                bottom: 94px;
+                right: 42px
+            }
+        }
+
+    }
+}
